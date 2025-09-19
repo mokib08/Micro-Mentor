@@ -1,10 +1,11 @@
 const express = require('express')
-const bcrypt = require("bcryptjs")
+const validators = require("../middlewares/validator.middleware")
+const authController = require("../controller/auth.controller")
 
 
 const router = express.Router();
 
 //POST /auth/register
-router.post("/register")
+router.post("/register", validators.registerUserValidations, authController.registerUser)
 
 module.exports = router
