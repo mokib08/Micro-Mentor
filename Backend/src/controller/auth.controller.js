@@ -5,14 +5,13 @@ const jwt = require("jsonwebtoken");
 async function registerUser(req, res) {
     try {
         const {
-            username,
+            name,
             email,
             password,
-            fullName: { firstName, lastName },
         } = req.body;
 
         const isUserAlreadyExists = await userModel.findOne({
-            $or: [{ username }, { email }],
+            email
         });
 
         if (isUserAlreadyExists) {
@@ -24,22 +23,19 @@ async function registerUser(req, res) {
         const hash = await bcrypt.hash(password, 10);
 
         const user = await userModel.create({
-            username,
+            name,
             email,
             password: hash,
-            fullName: { firstName, lastName },
         });
 
         const token = jwt.sign(
             {
                 id: user._id,
-                username: user.username,
-                email: user.email,
-                role: user.role,
+                email: user.email,                
             },
             process.env.JWT_SECRET,
             {
-                expiresIn: "1d",
+                expiresIn: "30d",
             }
         );
 
@@ -53,12 +49,8 @@ async function registerUser(req, res) {
             message: "User registered successfully",
             user: {
                 id: user._id,
-                username: user.username,
-                email: user.email,
-                fullName: user.fullName,
-                role: user.role,
-                addresses: user.addresses
-            }
+                name: user.name,
+                email: user.email,            }
         });
     } catch (err) {
         console.error("Error in registerUser : ", err)

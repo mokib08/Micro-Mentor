@@ -9,7 +9,7 @@ const respondWithValidationErrors = (req, res, next) => {
 };
 
 const registerUserValidations = [
-  body("username")
+  body("name")
     .isString()
     .withMessage("Username must be a string")
     .isLength({ min: 3 })
@@ -18,16 +18,6 @@ const registerUserValidations = [
   body("password")
     .isLength({ min: 6 })
     .withMessage("Password must be at least 6 characters long"),
-  body("fullName.firstName")
-    .isString()
-    .withMessage("First name must be a string")
-    .notEmpty()
-    .withMessage("First name is required"),
-  body("fullName.lastName")
-    .isString()
-    .withMessage("Last name must be a string")
-    .notEmpty()
-    .withMessage("Last name is required"),
   respondWithValidationErrors,
 ];
 
