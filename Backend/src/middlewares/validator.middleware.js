@@ -21,6 +21,17 @@ const registerUserValidations = [
   respondWithValidationErrors,
 ];
 
+const loginUserValidations = [
+    body("email")
+        .isEmail()
+        .withMessage("Invalid email address"),
+    body("password")
+    .isLength({min : 6})
+        .withMessage("Password must be atleast 6 characters long"),
+    respondWithValidationErrors
+]
+
 module.exports = {
-  registerUserValidations,
+    registerUserValidations,
+    loginUserValidations
 };
