@@ -16,7 +16,14 @@ const userSchema = mongoose.Schema({
         select: false
     },
     badges: [{
-        type: String
+        bedge: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Bedge"
+        },
+        awardedAt: {
+            type: Date,
+            default: Date.now
+        } 
     }]
 }, {timestamps : true})
 
