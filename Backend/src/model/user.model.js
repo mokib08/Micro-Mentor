@@ -1,14 +1,5 @@
 const mongoose = require("mongoose")
 
-
-const addressSchema = new mongoose.Schema({
-    street: String,
-    city: String,
-    state: String,
-    zip: String,
-    countery: String
-})
-
 const userSchema = mongoose.Schema({
     username: {
         type: String,
@@ -33,16 +24,11 @@ const userSchema = mongoose.Schema({
             type: String,
             required: true
         },
-        role: {
-            type: String,
-            enum: ['student', 'teacher'],
-            default: 'student'
-        },
-        addresses: {
-            addressSchema
-        }
-    }
-})
+    },
+    badges: [{
+        type: String
+    }]
+}, {timestamps : true})
 
 const userModel = mongoose.model('user', userSchema)
 
