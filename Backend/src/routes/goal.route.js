@@ -7,9 +7,7 @@ const {
     generateGoals,
     updateGoal,
     deletedGoal
-
 } = require('../controller/goals.controller')
-
 
 
 // router.get('/', getGoals)
