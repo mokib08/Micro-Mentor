@@ -12,7 +12,7 @@ const getGoals = async(req, res) => {
     })
 
     res.status(200).json({
-        message: 'get presemt goal',
+        message: 'get present goal',
         goal
     })
 }
