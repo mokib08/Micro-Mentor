@@ -1,21 +1,23 @@
 
 const TaskModel = require("../model/Task.Model")
 
-// const getTasks = async (req, res) => {
-//     try{
-//         const tasks = await TaskModel.find({
-//         userId: req.user.id
-//         });
+const getTasks = async (req, res) => {
 
-//         res.json(tasks);
-//     } catch(err) {
-//         res.status(500).json({
-//            error: err.message
-//         })
-//     }
+    const userId = req.body;
+    try{
+        const tasks = await TaskModel.find({
+        userId: userId
+        });
 
-
-// }
+        console.log(tasks);
+        
+        res.json(tasks);
+    } catch(err) {
+        res.status(500).json({
+           error: err.message
+        })
+    }
+}
 
 const createTask = async (req, res) => {
     const {title, description, startDate, dueDate} = req.body;
@@ -90,7 +92,7 @@ const deleteTask = async(req, res) => {
 
 
 module.exports ={
-    // getTasks
+    getTasks,
     createTask,
     updateTask,
     deleteTask

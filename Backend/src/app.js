@@ -1,7 +1,7 @@
 const express = require("express")
 const cookieParser = require("cookie-parser")
 const authRoutes = require("./routes/auth.routes")
-const tastRoute = require('./routes/task.Routes')
+const taskRoute = require('./routes/task.Routes')
 const goalsRoute = require('./routes/goal.route')
 const cors = require("cors")
 
@@ -14,7 +14,7 @@ app.use(cors())
 app.use('/api/auth', authRoutes)
 
 // taskRoute
-app.use('/api/task', tastRoute)
+app.use('/api/task', taskRoute)
 // goalsRoute with Gemini 
 app.use('/api/goals', goalsRoute)
 

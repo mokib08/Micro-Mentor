@@ -3,17 +3,19 @@ const generateGoal = require('../service/ai.service')
 
 
 // GET /api/goals
-// const getGoals = async(req, res) => {
+const getGoals = async(req, res) => {
 
-//     const goal = await goalModel.find({
-//         userId: req.user.id
-//     })
+    const goalId = req.body
 
-//     res.status(200).json({
-//         message: 'get presemt goal',
-//         goal
-//     })
-// }
+    const goal = await goalModel.find({
+        userId: goalId
+    })
+
+    res.status(200).json({
+        message: 'get presemt goal',
+        goal
+    })
+}
 
 // POST /api/goals (manually create)
 const createGoal = async(req, res) => {
@@ -40,9 +42,10 @@ const generateGoals = async(req, res) =>{
      // service call
     const microGoals = await generateGoal(mainGoal)
     
+    // Save to DB for user
     const saveGoals = await goalModel.insertMany(
         microGoals.map((g) => ({
-            // userId: req.user.id,
+            userId: req.user.id,
             title: g.title,
             description: g.description,
             deadline: g.deadline,
@@ -54,8 +57,6 @@ const generateGoals = async(req, res) =>{
         message: 'microGoal successfully saved',
         saveGoals
     })
-
-
 }
 
 
@@ -106,7 +107,7 @@ const deletedGoal = async(req, res) =>{
 }
 
 module.exports = {
-    // getGoals,
+    getGoals,
     createGoal,
     generateGoals,
     updateGoal,
