@@ -22,6 +22,15 @@ async function authMiddleware(req, res, next) {
     }
 }
 
+async function isAdmin(req, res, next) {
+    if (req.user && req.user.isAdmin) {
+        next();
+    } else {
+        return res.status(404).json({message : "not authorized as Admin"})
+    }
+}
+
 module.exports = {
-    authMiddleware
+    authMiddleware,
+    isAdmin
 }
