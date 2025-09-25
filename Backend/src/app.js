@@ -21,9 +21,9 @@ app.use('/api/task', taskRoute)
 app.use('/api/goals', goalsRoute)
 
 // bedgeRoutes
-app.use('api/bedge', bedgeRoutes)
+app.use('/api/bedge', bedgeRoutes)
 
 // reviewRoutes
-app.use('api/review', reviewRoutes)
+app.use('/api/review', reviewRoutes)
 
 module.exports = app;
