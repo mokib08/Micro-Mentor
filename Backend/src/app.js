@@ -5,6 +5,7 @@ const authRoutes = require("./routes/auth.routes")
 const bedgeRoutes = require('./routes/bedge.routes')
 const taskRoute = require('./routes/task.Routes')
 const goalsRoute = require('./routes/goal.route')
+const reviewRoutes = require('./routes/review.routes')
 const googleRoute = require('./routes/google.routes')
 
 const cors = require("cors")
@@ -34,6 +35,9 @@ app.use('/api/goals', goalsRoute)
 
 // bedgeRoutes
 app.use('/api/bedge', bedgeRoutes)
+
+// reviewRoutes
+app.use('/api/review', reviewRoutes)
 
 // GoogleCalendar
 app.use('/api/google', googleRoute)

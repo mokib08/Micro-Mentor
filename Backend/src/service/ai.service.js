@@ -62,5 +62,24 @@ async function generateGoal(mainGoal) {
  
 }
 
-module.exports = generateGoal
+async function generateWeeklyReview(goalsData) {
+  const prompt = `
+  Summarize the user's weekly progress:
+  - Total goals completed vs pending
+  - Highlight top achievements
+  - Suggest improvements
+  - Keep summary under 200 words, motivational tone
+  Here is the data: ${JSON.stringify(goalsData)}
+  `;
+
+  const result = await model.generateContent(prompt);
+  return result.response.text();
+}
+
+
+
+module.exports = {
+  generateGoal,
+  generateWeeklyReview
+};
 
