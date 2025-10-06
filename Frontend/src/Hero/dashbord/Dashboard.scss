@@ -1,0 +1,38 @@
+
+.dashboard{
+    // background: #e2e2e2;
+
+    .dash-container{
+
+    margin-top: 10rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+
+    .dash-content{
+        padding: 3rem;
+        h1{
+            font-size: 2.3rem;
+            font-weight: 600;
+        }
+        p{
+            width: 80%;
+            font-size: 1.1vw;
+            font-weight: 500;
+            padding: 1.3rem 0;
+        }
+
+        .desh-list{
+            li{
+                list-style: none;
+                // font-size: 1rem;
+                font-weight: 400;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+}
+

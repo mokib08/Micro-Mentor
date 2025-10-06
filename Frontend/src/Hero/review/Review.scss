@@ -1,0 +1,52 @@
+
+
+.review{
+    margin-top: 17vh;
+    padding-bottom: 5rem;
+    h1{
+        font-size: 3rem;
+        font-weight: 600 ;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    .review-card{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 4rem;
+
+        .single-review{
+            background-color: #e5e4e4bc;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+
+            img{
+                width: 5vw;
+                height: 10vh;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .name-review{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+
+                h2{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    padding: 1rem 0;
+                }
+
+                span{
+                    font-weight: 600;
+
+                    i{
+                        color: rgb(255, 140, 0)
+                    }
+                }
+            }
+        }
+    }
+}

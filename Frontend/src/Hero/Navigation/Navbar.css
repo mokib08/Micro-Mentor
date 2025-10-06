@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "mainFont";
+  src: url("../../assets/font/Lexend-VariableFont_wght.ttf");
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "mainFont";
+  /* অথবা শুধুমাত্র নিচের দিকে বর্ডার দিতে চাইলেঃ */
+}
+.navbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.navbar nav .nav-link {
+  text-decoration: none;
+  padding: 8px 16px;
+  color: #333;
+}
+.navbar nav .nav-link.active {
+  border: 1px solid #000;
+  border-radius: 4px;
+}/*# sourceMappingURL=Navbar.css.map */

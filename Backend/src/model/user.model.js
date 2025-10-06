@@ -15,6 +15,11 @@ const userSchema = mongoose.Schema({
         type: String,
         select: false
     },
+    role:{
+        type: String,
+        enum: ['user', 'admin'],
+        default: 'user'
+    },
     badges: [{
         bedge: {
             type: mongoose.Schema.Types.ObjectId,
@@ -24,7 +29,14 @@ const userSchema = mongoose.Schema({
             type: Date,
             default: Date.now
         } 
-    }]
+    }],
+
+
+    googleAccessToken: { type: String },
+    googleRefreshToken: { type: String },
+    googleTokenExpiry: { type: Date }
+
+
 }, {timestamps : true})
 
 const userModel = mongoose.model('user', userSchema)

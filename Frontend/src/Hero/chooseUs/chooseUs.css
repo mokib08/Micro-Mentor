@@ -1,0 +1,29 @@
+.chooseUs-main {
+  margin-top: 5rem;
+}
+.chooseUs-main .Wrapper h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.chooseUs-main .Wrapper h1 span {
+  color: #601902;
+}
+.chooseUs-main .Wrapper .card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+.chooseUs-main .Wrapper .card .card-row i {
+  font-size: 2rem;
+  color: #6a2f2f;
+}
+.chooseUs-main .Wrapper .card .card-row h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+.chooseUs-main .Wrapper .card .card-row p strong {
+  font-weight: 500;
+}/*# sourceMappingURL=chooseUs.css.map */

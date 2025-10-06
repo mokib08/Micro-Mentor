@@ -1,0 +1,34 @@
+.work {
+  margin-top: 5rem;
+}
+.work h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.work .work-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 4rem;
+}
+.work .work-card .single-card {
+  text-align: center;
+  background-color: rgba(229, 228, 228, 0.737254902);
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.work .work-card .single-card i {
+  font-size: 2rem;
+  color: rgb(41, 96, 152);
+}
+.work .work-card .single-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.work .work-card .single-card p {
+  padding-top: 0.6rem;
+  font-weight: 500;
+  color: rgb(61, 62, 62);
+}/*# sourceMappingURL=HowItWork.css.map */

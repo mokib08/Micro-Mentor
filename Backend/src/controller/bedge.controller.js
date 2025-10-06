@@ -5,6 +5,13 @@ const bedgeModel = require("../model/bedge.model");
 async function getAllBedges(req, res) {
   try {
     const bedges = await bedgeModel.find();
+    console.log(bedges);
+
+    res.status(201).json({
+      message: 'this is previous bedges',
+      bedges
+    })
+    
   } catch (err) {
     console.error("Error occur in getAllBedge", err);
     return res.status(500).json({ message: "Server error" });
@@ -80,7 +87,7 @@ async function awardBedge(req, res) {
     }
 
     // Add bedge
-    user.bedges.push({ bedge: bedge_id, awardedAt: new Date() });
+    user.bedges.push({ bedge: bedge._id, awardedAt: new Date() });
 
     // Save user
     await user.save();
@@ -88,6 +95,7 @@ async function awardBedge(req, res) {
     res.status(200).json({
       message: "Bedge awarded successfully",
       bedge: bedge.name,
+      user
     });
   } catch (err) {
     console.error("Error in bedge controller", err);

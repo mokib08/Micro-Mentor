@@ -1,5 +1,6 @@
 
-const TaskModel = require("../model/Task.Model")
+const TaskModel = require("../model/Task.Model");
+const googleCalendarService = require('../service/googleCalendar.service')
 
 const getTasks = async (req, res) => {
 
@@ -29,6 +30,16 @@ const createTask = async (req, res) => {
             startDate,
             dueDate
         })
+
+        const taskDetails = {
+            title: newTask.title,
+            description: newTask.description,
+            startDate: newTask.startDate,
+            dueDate : newTask.dueDate
+        };
+
+        await googleCalendarService.createEvent(req.user.id, taskDetails);
+
 
         res.status(201).json({
             message: 'task create successfully',

@@ -1,0 +1,106 @@
+
+@font-face{
+    font-family: 'mainFont';
+    src: url('../../assets/font/Lexend-VariableFont_wght.ttf');
+}
+
+
+.Header-main{
+    // width: 100vw;
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    font-family: 'mainFont';
+    margin-top: 5rem;
+
+    .Header-left{
+        width: 50%;
+        h1{
+            font-size: 4rem;
+            line-height: 4rem;
+            margin-bottom: 3rem;
+        }
+        p{
+            margin-bottom: 5rem;
+        }
+
+        .header-bottom{
+
+            display: flex;
+            align-items: center;
+        
+            gap: 5rem;
+
+
+            button{
+                background: rgb(22, 21, 23);
+                color: #fff;
+                padding: 0.7rem 2rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+            }
+
+            .review-img{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                img{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin-left: -2rem;
+                }
+            } 
+        }
+    }
+
+
+    .header-right{
+        width: 40%;
+        .right-img{
+            
+            img{
+                width: 25vw;
+                margin: auto
+            }
+        }
+    }
+    
+    
+}
+
+
+.Header-review{
+    margin-top: 5rem;
+
+    .header-parent{
+        display: grid;
+        // align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        // align-items: center;
+        // justify-items: center;
+        place-items: center;
+        
+        .head-child{
+            display: flex;
+            align-items: flex-start;
+            // align-items: center;
+            gap: 1rem;
+
+            .icon{
+                i{
+                 font-size: 2rem;
+                }
+            }
+
+            .title{
+                span{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

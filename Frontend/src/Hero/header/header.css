@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "mainFont";
+  src: url("../../assets/font/Lexend-VariableFont_wght.ttf");
+}
+.Header-main {
+  display: flex;
+  justify-content: space-between;
+  font-family: "mainFont";
+  margin-top: 5rem;
+}
+.Header-main .Header-left {
+  width: 50%;
+}
+.Header-main .Header-left h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  margin-bottom: 3rem;
+}
+.Header-main .Header-left p {
+  margin-bottom: 5rem;
+}
+.Header-main .Header-left .header-bottom {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.Header-main .Header-left .header-bottom button {
+  background: rgb(22, 21, 23);
+  color: #fff;
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.Header-main .Header-left .header-bottom .review-img {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.Header-main .Header-left .header-bottom .review-img img {
+  width: 2.5rem;
+  height: 2.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-left: -2rem;
+}
+.Header-main .header-right {
+  width: 40%;
+}
+.Header-main .header-right .right-img img {
+  width: 25vw;
+  margin: auto;
+}
+
+.Header-review {
+  margin-top: 5rem;
+}
+.Header-review .header-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  place-items: center;
+}
+.Header-review .header-parent .head-child {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.Header-review .header-parent .head-child .icon i {
+  font-size: 2rem;
+}
+.Header-review .header-parent .head-child .title span {
+  font-size: 1.3rem;
+  font-weight: 500;
+}/*# sourceMappingURL=header.css.map */

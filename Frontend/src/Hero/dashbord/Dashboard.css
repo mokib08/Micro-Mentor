@@ -1,0 +1,25 @@
+.dashboard .dash-container {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 2rem;
+  align-items: center;
+}
+.dashboard .dash-container .dash-content {
+  padding: 3rem;
+}
+.dashboard .dash-container .dash-content h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+.dashboard .dash-container .dash-content p {
+  width: 80%;
+  font-size: 1.1vw;
+  font-weight: 500;
+  padding: 1.3rem 0;
+}
+.dashboard .dash-container .dash-content .desh-list li {
+  list-style: none;
+  font-weight: 400;
+  padding-bottom: 5px;
+}/*# sourceMappingURL=Dashboard.css.map */
