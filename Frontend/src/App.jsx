@@ -11,8 +11,8 @@ const App = () => {
     <>
     <AppRoutes/>
    
-      <Hero />
-      <Footer />
+      
+      
     </>
     
    
