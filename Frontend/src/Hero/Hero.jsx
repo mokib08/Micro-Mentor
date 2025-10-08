@@ -6,6 +6,7 @@ import ChooseUs from './ChooseUs/ChooseUs'
 import HowItsWork from './chooseUs/HowItsWork'
 import Dashboard from './dashbord/Dashboard'
 import Review from './review/Review'
+import Footer from "../pages/footer/Footer";
 
 const Hero = () => {
   return (

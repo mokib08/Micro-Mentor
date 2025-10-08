@@ -9,7 +9,7 @@ const Sidebar = () => {
   return (
     <div>
         <div>
-           <NavLink className={(e) => (e.isActive ? 'blue' : "")} to="/">Home</NavLink>
+           <NavLink className={(e) => (e.isActive ? 'blue' : "")} to="/home">Home</NavLink>
            <NavLink className={(e) => (e.isActive ? 'blue' : "")} to="/tasks">Tasks</NavLink>
            <NavLink className={(e) => (e.isActive ? 'blue' : "")} to="/goal">Goal</NavLink>
            <NavLink className={(e) => (e.isActive ? 'blue' : "")} to="/badge">Badge</NavLink>
