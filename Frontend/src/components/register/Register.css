@@ -1,0 +1,113 @@
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.register-card {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  padding: 2rem 3rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+.register-card__header {
+  margin-bottom: 2rem;
+}
+.register-card__header p {
+  margin-top: 0.5rem;
+}
+.register-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+.register-card__footer {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}
+.register-card__footer p {
+  color: #5C6BC0;
+}
+
+/* Reuseable form component styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-group__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #5C6BC0;
+}
+.form-group__input {
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+  border: 1px solid #C5CAE9;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.form-group__input::-moz-placeholder {
+  color: rgb(165.5663716814, 173.796460177, 220.4336283186);
+}
+.form-group__input::placeholder {
+  color: rgb(165.5663716814, 173.796460177, 220.4336283186);
+}
+.form-group__input::focus {
+  outline: none;
+  border-color: #3D5AFD;
+  box-shadow: 0 0 0 3px rgba(61, 90, 253, 0.2);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+.form-row .form-group {
+  flex: 1;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+.btn--primary {
+  background-color: #3D5AFD;
+  color: #FFFFFF;
+}
+.btn--primary:hover {
+  background-color: rgb(20.6163265306, 55.6530612245, 252.5836734694);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.link {
+  color: #3D5AFD;
+  font-weight: 500;
+}
+.link:hover {
+  text-decoration: underline;
+  color: rgb(10.5204081633, 47.0663265306, 252.4795918367);
+}
+
+@media (max-width: 768px) {
+  .register-card {
+    padding: 2rem 1.5rem;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=Register.css.map */

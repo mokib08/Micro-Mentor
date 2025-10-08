@@ -1,0 +1,135 @@
+@use '../styles/variables' as *;
+
+.register-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: $spacing-lg;
+}
+
+.register-card{
+    background-color: $surface-color;
+    border-radius: $border-radius-md;
+    box-shadow: $box-shadow-md;
+    padding: $spacing-xl $spacing-xxl;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+
+    // element: .register-card__header
+    &__header{
+        margin-bottom: $spacing-xl;
+
+        p{
+            margin-top: $spacing-sm;
+        }
+    }
+
+    // element: .register-card__form
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-lg;
+        text-align: left;
+    }
+
+    &__footer{
+        margin-top: $spacing-lg;
+        font-size: $font-size-label;
+
+        p{
+            color: $text-secondary;
+        }
+    }
+}
+
+/* Reuseable form component styles */
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    // element: .form-group__label
+    &__label{
+        font-size: $font-size-label;
+        font-weight: $font-weight-medium;
+        color: $text-secondary;
+    }
+
+    // element: .form-group__input
+    &__input{
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        padding: $spacing-md;
+        border: 1px solid $border-color;
+        border-radius: $border-radius-md;
+        transition: $transition-base;
+
+        &::placeholder{
+            color: lighten($text-secondary, 20%);
+        }
+
+        // active field
+        &::focus{
+            outline: none;
+            border-color: $primary-color;
+            box-shadow: 0 0 0 3px rgba($primary-color, 0.2);
+        }
+    }
+}
+
+// for side by side form groups
+.form-row{
+    display: flex;
+    gap: $spacing-md;
+
+    // each form group in a row should take up equal space
+    .form-group{
+        flex: 1;
+    }
+}
+
+.btn{
+    padding: $spacing-md $spacing-lg;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    border: none;
+    border-radius: $border-radius-md;
+    cursor: pointer;
+    transition: $transition-base;
+    text-align: center;
+
+
+    &--primary{
+        background-color: $primary-color;
+        color: $surface-color;
+
+        &:hover{
+            background-color: darken($primary-color, $amount: 8%);
+            transform: translateY(-2px);
+            box-shadow: $box-shadow-md;
+        }
+    }
+}
+
+.link{
+    color: $primary-color;
+    font-weight: $font-weight-medium;
+
+    &:hover{
+        text-decoration: underline;
+        color: darken($color: $primary-color, $amount: 10%);
+    }
+}      
+
+@media (max-width: 768px) {
+    .register-card{
+        padding: $spacing-xl $spacing-lg;
+    }
+
+    .form-row{
+        flex-direction: column;
+    }
+}
