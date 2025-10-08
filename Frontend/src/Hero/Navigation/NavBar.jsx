@@ -13,7 +13,6 @@ const NavBar = () => {
                 <h1>Micro-Mentor</h1>
             </div>
 
-            
              <nav>
                 <a 
                   href="#register"
@@ -30,7 +29,7 @@ const NavBar = () => {
                 >
                   <i className="fa-solid fa-arrow-right-to-bracket"></i> Login
                 </a>
-              </nav>
+             </nav>
 
         </div>
     </div>

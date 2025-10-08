@@ -5,7 +5,7 @@ const HowItsWork = () => {
 
     const steps = [
         {
-            title: "Set Yout Goal" ,
+            title: "Set Your Goal" ,
             desc: "Define what you want to learn (e.g. JavaScript in 3 months).",
             icon : 'ri-focus-2-line'
         },

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import headerImage1 from '../../assets/image/header-img-1.jpg'
 import headerImage2 from '../../assets/image/header-img-2.jpg'
 import headerImage3 from '../../assets/image/header-img-3.jpg'
@@ -12,7 +12,7 @@ const Header = () => {
     <>
       <div className='Header-main' >
         <div className='Header-left' >
-          <h1>Achieve Your Learning Goals with Micro-Mentor Platform</h1>
+          <h1>Achieve Your Learning Goals with <span>Micro-Mentor</span> Platform</h1>
           <p>Stay consistent, track progress, and reach your goals with AI-powered micro-goals & weekly reviews.</p>
           <div className='header-bottom'>
             <button>Get Start</button>

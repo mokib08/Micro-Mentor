@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "mainFont";
   src: url("../../assets/font/Lexend-VariableFont_wght.ttf");
@@ -8,7 +7,6 @@
   align-items: center;
   justify-content: space-between;
   font-family: "mainFont";
-  /* অথবা শুধুমাত্র নিচের দিকে বর্ডার দিতে চাইলেঃ */
 }
 .navbar nav {
   display: flex;

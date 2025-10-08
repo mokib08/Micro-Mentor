@@ -16,6 +16,9 @@
   line-height: 4rem;
   margin-bottom: 3rem;
 }
+.Header-main .Header-left h1 span {
+  color: #601902;
+}
 .Header-main .Header-left p {
   margin-bottom: 5rem;
 }

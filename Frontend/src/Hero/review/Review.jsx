@@ -1,4 +1,4 @@
-import React from 'react'
+
 import studentImg1 from '../../assets/image/students-1.jpg'
 import studentImg2 from '../../assets/image/students-2.jpg'
 import studentImg3 from '../../assets/image/students-3.jpg'

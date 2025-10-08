@@ -1,4 +1,4 @@
-import React from 'react'
+
 import NavBar from './Navigation/NavBar'
 import './hero.scss'
 import Header from './header/Header'
