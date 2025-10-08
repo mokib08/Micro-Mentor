@@ -6,9 +6,7 @@
 
 
 .Header-main{
-    // width: 100vw;
     display: flex;
-    // align-items: center;
     justify-content: space-between;
     font-family: 'mainFont';
     margin-top: 5rem;
@@ -19,6 +17,10 @@
             font-size: 4rem;
             line-height: 4rem;
             margin-bottom: 3rem;
+
+            span{
+                color: #601902;
+            }
         }
         p{
             margin-bottom: 5rem;
@@ -77,16 +79,12 @@
 
     .header-parent{
         display: grid;
-        // align-items: center;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        // align-items: center;
-        // justify-items: center;
         place-items: center;
         
         .head-child{
             display: flex;
             align-items: flex-start;
-            // align-items: center;
             gap: 1rem;
 
             .icon{

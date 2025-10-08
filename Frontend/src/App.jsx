@@ -1,17 +1,25 @@
 
-import Footer from './pages/footer/Footer';
 import Hero from './Hero/Hero';
+import Footer from './pages/footer/Footer';
 
-import React from 'react'
+
 import AppRoutes from './AppRoutes'
+import Home from './pages/home/Home';
+import MainRoutes from './routes/MainRoutes';
 
 
 const App = () => {
   return (
     <>
-    <AppRoutes/>
-   
-      
+
+    <AppRoutes />
+    <Hero/>
+    <Footer />
+
+    
+    <MainRoutes>
+      <Home />
+    </MainRoutes>
       
     </>
     

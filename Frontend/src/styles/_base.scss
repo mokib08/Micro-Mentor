@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Apply foundational styles to the body
+body{
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $text-primary;
+    background-color: $bg-color;
+    -webkit-font-smoothin: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Define base typography styles
+
+h1{
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+}
+
+p{
+    color: $text-secondary;
+    line-height: 1.5;
+}
+
+Link{
+    text-decoration: none;
+    color: $primary-color;
+    transition: $transition-base
+}
