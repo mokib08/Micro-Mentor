@@ -1,0 +1,43 @@
+@use '../styles/variables' as *;
+
+.login-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: $spacing-lg;
+}
+
+.login-card{
+    background-color: $surface-color;
+    border-radius: $border-radius-md;
+    box-shadow: $box-shadow-md;
+    padding: $spacing-xl $spacing-xxl;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+
+    &__header{
+        margin-bottom: $spacing-xl;
+
+        p{
+            margin-bottom: $spacing-sm;
+        }
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-lg;
+        text-align: left;
+    }
+
+    &__footer{
+        margin-top: $spacing-lg;
+        font-size: $font-size-label;
+
+        p{
+            color: $text-secondary;
+        }
+    }
+}
