@@ -100,7 +100,7 @@
 }
 .link:hover {
   text-decoration: underline;
-  color: rgb(10.5204081633, 47.0663265306, 252.4795918367);
+  color: rgb(29.9204081633, 63.5663265306, 252.6795918367);
 }
 
 @media (max-width: 768px) {

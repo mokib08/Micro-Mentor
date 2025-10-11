@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../components/login/Login.scss'
+import './Login.scss'
 const Login = () => {
   return (
     <div className="login-page">
