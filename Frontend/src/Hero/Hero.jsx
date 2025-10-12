@@ -11,12 +11,15 @@ import Footer from "../pages/footer/Footer";
 const Hero = () => {
   return (
     <div className="hero-main">
-      <NavBar />
-      <Header />
-      <ChooseUs />
-      <HowItsWork />
-      <Dashboard />
-      <Review />
+      <div className="hero-wrapper">
+          <NavBar />
+          <Header />
+          <ChooseUs />
+          <HowItsWork />
+          <Dashboard />
+          <Review />
+      </div>
+      
       <Footer />
     </div>
   );

@@ -1,14 +1,10 @@
 
-@font-face{
-    font-family: 'mainFont';
-    src: url('../../assets/font/Lexend-VariableFont_wght.ttf');
-}
-
+@use '../../components/styles/variables' as * ;
 
 .Header-main{
     display: flex;
     justify-content: space-between;
-    font-family: 'mainFont';
+    // font-family: 'mainFont';
     margin-top: 5rem;
 
     .Header-left{
@@ -17,6 +13,7 @@
             font-size: 4rem;
             line-height: 4rem;
             margin-bottom: 3rem;
+            font-weight: $font-weight-medium;
 
             span{
                 color: #601902;
@@ -24,6 +21,7 @@
         }
         p{
             margin-bottom: 5rem;
+            font-weight: 500;
         }
 
         .header-bottom{

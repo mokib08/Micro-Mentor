@@ -1,5 +1,12 @@
+@use '../components/styles/variables' as *;
+
 
 .hero-main{
     background-color: #ececec;
-    padding: 2rem 5rem;
+    font-family: $font-family-base ;
+
+    .hero-wrapper{
+        padding: 2rem 5rem;
+        
+    }
 }

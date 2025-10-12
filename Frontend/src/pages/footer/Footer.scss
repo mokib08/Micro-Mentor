@@ -1,4 +1,6 @@
 
+@use '../../components/styles/variables' as *;
+
 .footer-main{
      background-color: #ececec;
      .footer{
@@ -22,7 +24,8 @@
          }
      
          a{
-             
+            text-decoration: none;
+             color: #00cbb0;
              border-bottom: 1px solid #ddd;
              padding-bottom: 0.5rem;
              font-weight: 600;

@@ -9,7 +9,7 @@ const NavBar = () => {
     <div>
       <div className="navbar">
         <div className="logo">
-          <h1>Micro-Mentor</h1>
+          <span>Micro-Mentor</span>
         </div>
 
         <nav>

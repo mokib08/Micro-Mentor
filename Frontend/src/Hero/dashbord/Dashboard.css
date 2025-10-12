@@ -22,4 +22,7 @@
   list-style: none;
   font-weight: 400;
   padding-bottom: 5px;
+}
+.dashboard .dash-container .dash-image img {
+  width: 100%;
 }/*# sourceMappingURL=Dashboard.css.map */

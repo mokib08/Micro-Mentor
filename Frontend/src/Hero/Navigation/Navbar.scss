@@ -1,32 +1,29 @@
-
-@font-face{
-    font-family: 'mainFont';
-    src: url('../../assets/font/Lexend-VariableFont_wght.ttf');
-}
+@use '../../components/styles/variables' as *;
 
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'mainFont';
 
+    span{
+        color: $heading-color;
+        font-weight: $font-weight-medium;
+    }
 
     nav{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 2rem;
         
 
-         .nav-link {
+        a{
             text-decoration: none;
-            padding: 8px 16px;
-            color: #333;
-        }
+            color: #111;
 
-        .nav-link.active {
-            border: 1px solid #000;
-            border-radius: 4px;
+            &:hover{
+                color: $heading-color ;
+            }
         }
     }
     

@@ -4,6 +4,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 1.5rem;
+  font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .register-card {
@@ -20,6 +21,7 @@
 }
 .register-card__header p {
   margin-top: 0.5rem;
+  font-weight: 500;
 }
 .register-card__form {
   display: flex;
@@ -47,7 +49,7 @@
   color: #5C6BC0;
 }
 .form-group__input {
-  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   padding: 1rem;
   border: 1px solid #C5CAE9;

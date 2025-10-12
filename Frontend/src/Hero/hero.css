@@ -1,4 +1,7 @@
 .hero-main {
   background-color: #ececec;
+  font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.hero-main .hero-wrapper {
   padding: 2rem 5rem;
 }/*# sourceMappingURL=hero.css.map */

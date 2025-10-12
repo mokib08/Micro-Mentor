@@ -21,7 +21,7 @@
 }
 .review .review-card .single-review img {
   width: 5vw;
-  height: 10vh;
+  height: 5vw;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
