@@ -8,6 +8,7 @@ import Badge from "../pages/badge/Badge";
 import Hero from "../Hero/Hero";
 import Register from "../components/register/Register";
 import Login from "../components/login/Login";
+import Progress from "../pages/progress/Progress";
 
 const MainRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const MainRoutes = () => {
         <Route path='login' element={<Login />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/goal" element={<Goal />} />
+        <Route path="/progress" element={<Progress/>} />
         <Route path="/badge" element={<Badge />} />
         {/* <Route path='/tasks' element={<Tasks />} /> */}
       </Routes>
