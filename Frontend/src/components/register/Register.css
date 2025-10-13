@@ -57,10 +57,10 @@
   transition: all 0.2s ease-in-out;
 }
 .form-group__input::-moz-placeholder {
-  color: rgb(165.5663716814, 173.796460177, 220.4336283186);
+  color: rgb(124.6, 136.6, 204.6);
 }
 .form-group__input::placeholder {
-  color: rgb(165.5663716814, 173.796460177, 220.4336283186);
+  color: rgb(124.6, 136.6, 204.6);
 }
 .form-group__input::focus {
   outline: none;

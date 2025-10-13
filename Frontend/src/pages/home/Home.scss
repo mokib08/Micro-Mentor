@@ -1,0 +1,58 @@
+@use '../../components/styles/variables' as *;
+
+.dashboard-layout{
+    // The main content area of the layout
+
+    &__main{
+        // CRITICAL : This pushes the main content out from behind the fixed sidebar
+        margin-left: 250px;
+        padding: $spacing-xxl;
+    }
+}
+
+/* Home page specific style */
+
+// A simple header for the dashboard pages
+
+.dashboard-header{
+    margin-bottom: $spacing-xl;
+    
+    h2{
+        font-size: 2rem; // 32px
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+    }
+}
+
+// A container for the stat cards, using CSS grid for a responsive layout
+.stats-grid{
+    display: grid;
+
+    // Create 3 columns of equeal width, but allow them to shrink if needed
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $spacing-lg
+}
+
+// stat card : a card for displaying a single piece of data (e.g., goal count)
+.stat-card{
+    background-color: $surface-color;
+    border-radius: $border-radius-md;
+    padding: $spacing-lg;
+    box-shadow: $box-shadow-md;
+    border-left: 4px solid $primary-color; // add a nice accent color
+
+    // stat-card__label : The title of the stat
+    &__label{
+        font-size: $font-size-base;
+        font-weight: $font-weight-medium;
+        color: $text-secondary;
+        margin-bottom: $spacing-sm;
+    }
+
+    // .stat-card__value : The actual data point
+    &__value{
+        font-size: 2.5rem;  // 40px
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+    }
+}

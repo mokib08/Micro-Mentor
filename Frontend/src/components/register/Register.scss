@@ -71,7 +71,7 @@
         transition: $transition-base;
 
         &::placeholder{
-            color: lighten($text-secondary, 20%);
+            color: color.scale($text-secondary, $lightness: 20%);
         }
 
         // active field

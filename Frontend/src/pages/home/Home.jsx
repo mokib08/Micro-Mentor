@@ -1,36 +1,41 @@
 import React from "react";
 import Tasks from "../tasks/tasks";
 import Sidebar from "../sidebar/sidebar";
+import './Home.scss';
 
 const Home = () => {
   return (
-    <div>
-      <div className="container">
-        <div className="sidebar">
-          <Sidebar />
-        </div>
+    <div className="dashboard-layout">
+      <Sidebar />
 
-        <div className="center-div">
-          <main>
-            <h2>Welcome champ</h2>
-            <div>
-              <div>
-                <h3>Total Goals</h3>
-                <p>15</p>
-              </div>
-              <div>
-                <h3>Completed</h3>
-                <p>8</p>
-              </div>
-              <div>
-                <h3>Streak</h3>
-                <p>5 days</p>
-              </div>
-            </div>
-          </main>
+      {/* The main content area of the dashboard */}
+      <main className="dashboard-layout__main">
+        <header className="dashboard-header">
+          <h2>Welcome Champ</h2>
+        </header>
+
+        {/* a grid to display key statics */}
+        <div className="stats-grid">
+          {/* Reusable block : A card for displaying a single stat */}
+          <div className="stat-card">
+            <h3 className="stat-card__label">Total Goals</h3>
+            <p className="stat-card__value">15</p>
+          </div>
+          <div className="stat-card">
+            <h3 className="stat-card__label">Completed</h3>
+            <p className="stat-card__value">8</p>
+          </div>
+          <div className="stat-card">
+            <h3 className="stat-card__label">Streak</h3>
+            <p className="stat-card__value">5 days</p>
+          </div>
         </div>
-        <div className="right-side-div"></div>
-      </div>
+      </main>
+
+      {/* an aside element for supplementary content (e.g., calendar, profile) */}
+      <aside className="dashboard-layout__aside">
+        {/* Content for the right side can be added here later */}
+      </aside>
     </div>
   );
 };
