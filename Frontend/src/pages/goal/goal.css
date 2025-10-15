@@ -1,1 +1,119 @@
-/*# sourceMappingURL=goal.css.map */
+.goals-layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.goals-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.add-goal-card {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.add-goal-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.add-goal-form {
+  display: flex;
+  gap: 1.5rem;
+}
+.add-goal-form .form-group__input {
+  flex-grow: 1;
+}
+
+.goal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.goal-list__empty-message {
+  text-align: center;
+  padding: 2rem;
+  color: #5C6BC0;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  border: 1px dashed #C5CAE9;
+}
+
+.goal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  padding: 0.5rem 1.5rem;
+  border: 4px solid #C5CAE9;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.goal-item__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.goal-item__checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #3D5AFD;
+  cursor: pointer;
+}
+.goal-item__title {
+  color: #1A237E;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.goal-item--completed {
+  border-left-color: #3D5AFD;
+  background-color: rgb(247.1166666667, 248.55, 249.9833333333);
+}
+.goal-item--completed .goal-item__title {
+  text-decoration: line-through;
+  color: #5C6BC0;
+}
+
+.btn-icon {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.btn-icon-delete {
+  color: #5C6BC0;
+}
+.btn-icon-deletehover {
+  background-color: rgb(242.1666666667, 194.3333333333, 194.3333333333);
+}
+
+.goals-aside {
+  position: sticky;
+  top: 3rem;
+}
+
+.goal-summary-card {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.goal-summary-card h3 {
+  font-family: 1.25rem;
+  margin-bottom: 1rem;
+  color: #5C6BC0;
+  font-weight: 500;
+}
+.goal-summary-card h3 span:last-child {
+  color: #1A237E;
+}/*# sourceMappingURL=goal.css.map */

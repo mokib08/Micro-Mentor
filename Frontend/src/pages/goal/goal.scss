@@ -1,0 +1,145 @@
+@use "../../components/styles/variables" as *;
+
+
+// A two column grid layout for the goals page
+
+.goals-layout-grid {
+  display: grid;
+  // The main content takes up more space than the aside.
+  grid-template-columns: 2fr 1fr;
+  gap: $spacing-xl;
+  align-items: start; // Align items to the top of their grid cell.
+}
+
+.goals-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+}
+
+// Card: for adding a new goal
+.add-goal-card {
+  background-color: $surface-color;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow-md;
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.add-goal-form {
+  display: flex;
+  gap: $spacing-lg;
+
+  // Allow the input field to grow and fill available space
+  .form-group__input {
+    flex-grow: 1;
+  }
+}
+
+// Container for the list of goals
+.goal-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  &__empty-message {
+    text-align: center;
+    padding: $spacing-xl;
+    color: $text-secondary;
+    background-color: $surface-color;
+    border-radius: $border-radius-md;
+    border: 1px dashed $border-color;
+  }
+}
+
+// Styles for an individual goal item
+.goal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $surface-color;
+  padding: $spacing-sm $spacing-lg;
+  border: 4px solid $border-color;
+  border-radius: $border-radius-md;
+  transition: $transition-base;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+  }
+
+  &__checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: $primary-color; // Styles the checkmark color
+    cursor: pointer;
+  }
+
+  &__title{
+    color: $text-primary;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+    transition: $transition-base;
+  }
+
+  // Modifier for the Complete state
+  &--completed{
+    border-left-color: $primary-color;
+    background-color: lighten($bg-color, 1%);
+
+    .goal-item__title{
+        text-decoration: line-through;
+        color: $text-secondary;
+    }
+  }
+}
+
+// A reusable style for small icon/text buttons
+.btn-icon{
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    padding: $spacing-sm;
+    font-weight: $font-weight-medium;
+    border-radius: $border-radius-md;
+    transition: $transition-base;
+
+    &-delete{
+        color: $text-secondary;
+
+        &hover{
+            background-color: lighten($error-color, 35%);
+        }
+    }
+}
+
+// Styles for the summary card in the aside
+.goals-aside{
+    // This makes the summary card stick to the top as the user scrolls the goal list.
+    position:sticky;
+    top: $spacing-xxl;
+}
+
+.goal-summary-card{
+    background-color: $surface-color;
+    padding: $spacing-lg;
+    border-radius: $border-radius-md;
+    box-shadow: $box-shadow-md;
+
+    h3{
+        font-family: 1.25rem;
+        margin-bottom: $spacing-md;
+        color: $text-secondary;
+        font-weight: $font-weight-medium;
+
+        span:last-child{
+            color: $text-primary;
+        }
+    }
+}
